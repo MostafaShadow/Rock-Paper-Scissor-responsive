@@ -17,8 +17,8 @@ let score = 0;
 
 
 // function score
-const updateScore = () => {
-    score++;
+const updateScore = (val) => {
+    score += val;
     textScore.innerText = score;
 }
 
@@ -58,6 +58,7 @@ const checkWinnerUserOrComputer = () => {
 
     if (computerChoice === userChoice) {
         statusGame.innerHTML = "You Draw";
+        document.querySelector(".draw").play();
 
     } else if (
         computerChoice === "paper" && userChoice === "rock" ||
@@ -66,10 +67,13 @@ const checkWinnerUserOrComputer = () => {
     ) {
         // user lost
         statusGame.innerHTML = "You Lose";
+        document.querySelector(".fail").play();
+        updateScore(-1);
     } else {
         // user win
         statusGame.innerHTML = "You win";
-        updateScore();
+        updateScore(1);
+        document.querySelector(".sucsse").play();
     }
 }
 
