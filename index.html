@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+            <div class="game-name">
+                <img src="./images/logo.svg" alt="logo" srcset="">
+            </div>
+            <div class="score">
+                <span>score</span>
+                <h1>0</h1>
+            </div>
+        </div>
+
+        <div class="shapes">
+            <div class="paper shape" data-choice="paper">
+                <div class="bg-circle-cover blue">
+                    <img src="./images/icon-paper.svg" alt="paper">
+                </div>
+            </div>
+            <div class="scissors shape" data-choice="scissors">
+                <div class="bg-circle-cover yellow">
+                    <img src="./images/icon-scissors.svg" alt="scissors">
+                </div>
+            </div>
+            <div class="rock shape" data-choice="rock">
+                <div class="bg-circle-cover red">
+                    <img src="./images/icon-rock.svg" alt="rock">
+                </div>
+            </div>
+
+        </div>
+
+        <section class="section">
+            <div class="you">
+                <h2>You Picked</h2>
+                <div class="scissors shape" data-choice="scissors" id="user-clicked">
+                    <div class="bg-circle">
+                        <img src="./images/icon-scissors.svg" alt="scissors">
+                    </div>
+                </div>
+            </div>
+            <div class="status">
+                <h2 class="status-text"></h2>
+                <div class="play-button">
+                    <span>Play Again</span>
+                </div>
+            </div>
+            <div class="computer">
+                <h2> computer Picked</h2>
+                <div class="rock shape" data-choice="rock" id="computer-clicked">
+                    <div class="bg-circle">
+                        <img src="./images/icon-rock.svg" alt="rock">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="btn-rules">
+            <span>rules</span>
+        </div>
+    </div>
+    </div>
+    <div class="page-rules">
+        <div class="parent-rules">
+            <div class="name-close-container">
+                <div class="name">
+                    rules
+                </div>
+                <div class="close"></div>
+            </div>
+            <img class="rules" src="./images/image-rules.svg" alt="rules">
+        </div>
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
