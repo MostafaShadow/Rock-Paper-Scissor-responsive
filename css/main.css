@@ -24,7 +24,7 @@ body {
     padding: 15px;
     justify-content: space-between;
     text-transform: uppercase;
-    margin: auto;
+    margin: 0 auto 20px;
     user-select: none;
 }
 
@@ -32,7 +32,7 @@ body {
     background-color: #fafafa;
     border-radius: inherit;
     text-align: center;
-    flex-basis: 150px;
+    width: 150px;
     padding: 10px;
 }
 .container .info .score span {
@@ -55,7 +55,6 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 20px auto;
 }
 
 .container .shapes > div {
@@ -185,7 +184,6 @@ body {
     transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 35px;
-    opacity: 0;
 }
 
 .page-rules .parent-rules .name-close-container {
@@ -229,7 +227,61 @@ body {
     height: 190px;
 }
 
+footer {
+    margin-top: 30px;
+    width: inherit;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+footer span {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #bfa3a3;
+    font-weight: 700;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
 /* media query responsive */
+
+@media (min-width: 355px) {
+    .container {
+        width: 90vw;
+    }
+
+    .container .info .score {
+        margin-left: 10px;
+        width: 100px;
+    }
+    .container .shapes {
+        width: 95vw;
+    }
+    .container .shapes > div {
+        flex-basis: 110px;
+    }
+    .container section {
+        width: 100vw;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .container section .shape {
+        width: 100px;
+        height: 100px;
+    }
+    .container section h2 {
+        font-size: 13px;
+        text-align: start;
+    }
+    .container section .status {
+        order: 1;
+        margin-top: 50px;
+    }
+    .btn-rules {
+        margin-top: 60px;
+        margin-left: -20%;
+    }
+}
 
 @media (min-width: 370px) {
     .container {
@@ -249,18 +301,15 @@ body {
         flex-wrap: wrap;
         margin-left: -30px;
     }
+    .container section h2 {
+        text-align: center;
+    }
     .container section .shape {
         width: 130px;
         height: 130px;
         margin: 20px;
     }
-    .container section h2 {
-        font-size: 15px;
-    }
-    .container section .status {
-        order: 1;
-        margin-top: 50px;
-    }
+
     .btn-rules {
         margin-top: 50px;
         margin-left: -10%;
@@ -268,6 +317,12 @@ body {
 }
 
 @media (min-width: 500px) {
+    .container .info .score {
+        width: 130px;
+    }
+    .container .shapes {
+        margin: auto;
+    }
     .container section {
         width: 80vw;
         margin: 50px auto;
@@ -275,7 +330,11 @@ body {
     .container .shapes {
         width: 80vw;
     }
-   
+}
+@media (min-width: 576px) {
+    .container .shapes {
+        width: 70vw;
+    }
 }
 
 @media (min-width: 600px) {
@@ -288,9 +347,10 @@ body {
         margin: 30px;
     }
 }
-@media (min-width: 576px) {
+
+@media (min-width: 676px) {
     .container .shapes {
-        width: 70vw;
+        width: 50vw;
     }
 }
 
@@ -363,41 +423,5 @@ body {
 @media (min-width: 1400px) {
     .container .shapes {
         width: 20vw;
-    }
-}
-
-.animation {
-    animation: page 0.2s linear forwards;
-}
-@keyframes page {
-    0% {
-        opacity: 0;
-        transform: translate(107%, 127%);
-    }
-    2% {
-        opacity: 0.1;
-        transform: translate(90%, 100%);
-    }
-
-    40% {
-        opacity: 0.1;
-        transform: translate(70%, 90%);
-    }
-
-    60% {
-        opacity: 0.1;
-        transform: translate(50%, 70%);
-    }
-    80% {
-        opacity: 0.1;
-        transform: translate(30%, 40%);
-    }
-    90% {
-        opacity: 0.1;
-        transform: translate(10%, 20%);
-    }
-    100% {
-        transform: translate(none);
-        opacity: 1;
     }
 }

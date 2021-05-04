@@ -95,9 +95,6 @@ allShape.forEach(shape => {
 // show Rules Game 
 button.onclick = function () {
     pageRules.style.display = "block";
-    setTimeout(function () {
-        imgRules.classList.add("animation")
-    }, 200)
 }
 
 // Remove Rules Game
